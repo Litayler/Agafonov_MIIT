@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+# Изменения внесены в ветке developer (ПЗ №1 Часть 2)
 
 electric_scooters = {
     "Ninebot Max G30": {"Скорость": 30, "Запас хода": 65, "Мощность": 350, "Батарея": 15, "Нагрузка": 100},
@@ -13,7 +14,7 @@ char_names = ["Скорость", "Запас хода", "Мощность", "Б
 
 char_data = [[electric_scooters[m][c] for c in char_names] for m in models]
 
-# ФУНКЦИИ ===
+# ФУНКЦИИ
 
 def get_normal(data):
     """Нормализация относительно первого образца (базового)"""
@@ -74,7 +75,7 @@ def create_radial(models, names, normal_data):
     plt.tight_layout()
     plt.show()
 
-#РАСЧЁТЫ ===
+#РАСЧЁТЫ
 normalized = get_normal(char_data)
 ks_values = get_quality(normalized)
 
@@ -88,6 +89,6 @@ best_model = models[np.argmax(ks_values)]
 print(f"\n✅ ЛУЧШИЙ САМОКАТ: {best_model} (Ks = {max(ks_values):.3f})")
 print("="*50)
 
-# ВИЗУАЛИЗАЦИЯ ===
+# ВИЗУАЛИЗАЦИЯ
 create_bar(models, ks_values)
 create_radial(models, char_names, normalized)
