@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Boeing 737-800",
+    "fuel_consumption": 2500,
+    "max_speed": 850,
+    "engine_lifespan": 25000,
+    "noise_level": 85
+  },
+  {
+    "name": "Airbus A320",
+    "fuel_consumption": 2400,
+    "max_speed": 840,
+    "engine_lifespan": 26000,
+    "noise_level": 82
+  },
+  {
+    "name": "Boeing 777-300ER",
+    "fuel_consumption": 6500,
+    "max_speed": 905,
+    "engine_lifespan": 30000,
+    "noise_level": 95
+  }
+]
